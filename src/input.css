@@ -22,7 +22,7 @@
 
 @layer utilities {
   .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
+    @apply sm:px-16 px-4 sm:py-24 py-12;
   }
 
   .padding-x {
@@ -52,4 +52,16 @@
   .info-text {
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
+}
+
+.background-shoes-purple {
+  background-image: url("/image/thumbnail-background.svg");
+  background-size: cover;
+}
+.backgroundShoesPurpleLight {
+  background-image: url("/image/thumbnail-background-light.svg");
+}
+
+.border-shoes-card {
+  @apply border-2 border-orange-400;
 }
