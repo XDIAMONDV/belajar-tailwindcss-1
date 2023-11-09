@@ -65,3 +65,7 @@
 .border-shoes-card {
   @apply border-2 border-orange-400;
 }
+
+.nav-menu-color {
+  @apply hover:bg-orange-200 hover:rounded-lg py-1 w-full flex justify-center border-2 border-orange-300 rounded-lg;
+}

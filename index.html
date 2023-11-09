@@ -8,7 +8,7 @@
     <title>Nike</title>
   </head>
   <body>
-  <main class="relative">
+  <main class="relative overflow-hidden">
     <header class="padding-x py-8 absolute z-10 w-full">
       <nav class="flex justify-between items-center max-container">
         <a href="" class=""
@@ -42,25 +42,44 @@
           <li>Sign In</li>
         </ul>
         <!-- Hambuger Menu -->
-        <div class="lg:hidden">
-          <div class="w-6 h-[2px] bg-black mb-[7px]"></div>
-          <div class="w-6 h-[2px] bg-black mb-[7px]"></div>
-          <div class="w-6 h-[2px] bg-black"></div>
+        <div class="lg:hidden  ">
+          
+        <div class="relative">
+          <button id="hambuger-menu" type="button" name="hambuger-menu" class="">
+          <div class="w-6 h-[2px] bg-black mb-[7px] transition duration-300 "></div>
+          <div class="w-6 h-[2px] bg-black mb-[7px] transition duration-200 "></div>
+          <div class="w-6 h-[2px] bg-black transition duration-300 "></div>
+          </button>
+
+          <div id="menu" class="hidden z-999  absolute -left-[100px] w-36 px-3 py-2 shadow-lg bg-white/25  backdrop-blur-sm text-black border-[2px] border-orange-400 rounded-lg mt-2">
+           
+          <ul class="text-base flex flex-col items-center  font-semi w-full gap-2">
+            <li class="nav-menu-color"><a href="">Beranda</a></li>
+            <li class="nav-menu-color"><a href="">Tentang Kami</a></li>
+            <li class="nav-menu-color"><a href="">Produk</a></li>
+            <li class="nav-menu-color"><a href="">Hubungi Kami</a></li>
+            <li class="nav-menu-color"><a href="">Sign In</a></li>
+          </ul>
+          </div>
+          </div>
         </div>
+        
+        
+        <!-- Hambuger Menu End -->
       </nav>
     </header>
     <!-- Hero Section -->
-    <section class="wide:padding-r padding-b padding-l">
+    <section class="wide:padding-r padding-b padding-l padding-t max-sm:pl-0">
     <section
       id="hero"
-      class="w-full flex xl:flex-row flex-col min-h-screen gap-10 max-container justify-center"
+      class="w-full flex xl:flex-row flex-col min-h-screen gap-10 max-container justify-center "
     >
       <div
         class="relative xl:w-2/5 w-full flex flex-col justify-center items-start max-xl:padding-x pt-20"
       >
-        <p class="text-orange-600 text-lg mb-5">Koleksi Musim Panas Kami</p>
+        <p class="text-orange-600 text-lg mb-7">Koleksi Musim Panas Kami</p>
         <h1
-          class="text-[65px] leading-[82px] max-sm:text-lg font-semibold mb-4"
+          class="text-[65px] leading-[82px]  max-sm:text-[57px] font-semibold mb-4"
         >
           Sepatu <span class="text-orange-500">Nike</span>
           <br />
@@ -90,17 +109,18 @@
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
-              d="M11.0886 6.18499C10.8717 6.43163 10.8717 6.83153 11.0886 7.07817L13.1032 9.36842H5.55556C5.24873 9.36842 5 9.65119 5 10C5 10.3488 5.24873 10.6316 5.55556 10.6316H13.1032L11.0886 12.9218C10.8717 13.1685 10.8717 13.5684 11.0886 13.815C11.3056 14.0617 11.6574 14.0617 11.8743 13.815L14.8373 10.4466C15.0542 10.1999 15.0542 9.80005 14.8373 9.55341L11.8743 6.18499C11.6574 5.93834 11.3056 5.93834 11.0886 6.18499Z"
+              d="M11.0886 6.18499C10.8717 6.43163 10.8717 6.83153 11.0886 7.07817L13.1032 9.36842H5.55556C5.24873 9.36842 5 9.65119 5 10C5 10.3488 5.24873 10.6316 5.55556 10.6316H13.1032L11.0886 12.9218C10.8717 13.1685 10.8717 13.5684 11.0886 13.815C11.3056 14.0617 11.6574 14.0617 11.8743 13.815L14.8373 10.4466C15.0542 10.1999 15.0542 9.80005 14.8373 9.55341L11.8743 6.18499C11.6574 5.93834 11.3056 5.93834 11.0886 6.18499"
               fill="#FF6452"
             />
           </svg>
         </button>
-        <div class="flex item-start w-full mt-16 gap-12 flex-wrap">
-          <div class="">
+
+        <div class="flex items-start w-full mt-16 gap-12 flex-wrap max-sm:justify-center max-sm:gap-9 max-sm:mb-10">
+          <div class="flex flex-col">
             <span class="font-bold text-4xl">1k+</span>
             <p class="text-slate-500">Merek</p>
           </div>
-          <div class="">
+          <div class="flex flex-col">
             <span class="font-bold text-4xl">500+</span>
             <p class="text-slate-500">Toko</p>
           </div>
@@ -112,7 +132,7 @@
       </div>
 
       <div
-        class="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-cover bg-center backgroundShoesPurpleLight"
+        class="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-cover bg-center backgroundShoesPurpleLight max-sm:mb-10"
       >
         <img
           id="bigImage"
@@ -163,12 +183,12 @@
     
       <!-- Popular Product Section Start -->
       <section class="padding">
-        <section class="max-container max-sm:mt-12">
+        <section class="max-container max-sm:mt-12 max-sm:px-2">
         <div class="flex flex-col justify-start gap-5">
-          <h1 class="text-4xl font-bold mb-2">
+          <h1 class="text-4xl font-bold mb-2 max-sm:text-[50px]">
             Produk <span class="text-orange-500">Popular</span> Kami
           </h1>
-          <p class="lg:max-w-lg leading-5 text-m text-slate-500">
+          <p class="lg:max-w-lg leading-5 text-lg text-slate-500 max-sm:leading-normal" >
             Rasakan kualitas dan gaya terbaik dengan pilihan kami yang paling banyak dicari. Temukan kenyamanan, desain, dan nilai dunia.
           </p>
         </div>
@@ -177,7 +197,8 @@
         <div
           class="mt-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-15 sm:gap-4 "
         >
-          <div class="flex flex-col flex-1 w-full max-sm:w-full transition hover:scale-105 duration-400">
+        
+          <div class="flex flex-col flex-1 w-full max-sm:w-full lg:transition lg:hover:scale-105 lg:duration-400 max-sm:mb-10">
             <img src="image/shoe4.svg" alt="" class="w-[280px] h-[280px]" />
               <div class="mt-4 flex justify-start items-center gap-2">
                 <img src="image/star.svg" width="20" height="20" class="ml-1"/>
@@ -187,7 +208,7 @@
               <p class="text-sm ml-1 font-bold text-orange-600">Rp 1.100.499</p>
             </div>
 
-            <div class="flex flex-col flex-1 w-full max-sm:w-full transition hover:scale-105 duration-400">
+            <div class="flex flex-col flex-1 w-full max-sm:w-full lg:transition lg:hover:scale-105 lg:duration-400 max-sm:mb-10">
               <img src="image/shoe5.svg" alt="" class="w-[280px] h-[280px]" />
                 <div class="mt-4 flex justify-start items-center gap-2">
                   <img src="image/star.svg" width="20" height="20" class="ml-1"/>
@@ -197,7 +218,7 @@
                 <p class="text-sm ml-1 font-bold text-orange-600">Rp 1.300.499</p>
             </div>
 
-            <div class="flex flex-col flex-1 w-full max-sm:w-full transition hover:scale-105 duration-400">
+            <div class="flex flex-col flex-1 w-full max-sm:w-full lg:transition lg:hover:scale-105 lg:duration-400 max-sm:mb-10">
               <img src="image/shoe6.svg" alt="" class="w-[280px] h-[280px]" />
                 <div class="mt-4 flex justify-start items-center gap-2">
                   <img src="image/star.svg" width="20" height="20" class="ml-1"/>
@@ -207,7 +228,7 @@
                 <p class="text-sm ml-1 font-bold text-orange-600">Rp 1.400.499</p>
             </div>
 
-            <div class="flex flex-col flex-1 w-full max-sm:w-full transition hover:scale-105 duration-400">
+            <div class="flex flex-col flex-1 w-full max-sm:w-full lg:transition lg:hover:scale-105 lg:duration-400">
               <img src="image/shoe7.svg" alt="" class="w-[280px] h-[280px] " />
                 <div class="mt-4 flex justify-start items-center gap-2">
                   <img src="image/star.svg" width="20" height="20" class="ml-1"/>
@@ -215,6 +236,7 @@
                 </div>
                 <h3 class="font-bold ml-1 leading-normal mt-1">Nike Air Jordan-45</h3>
                 <p class="text-sm ml-1 font-bold text-orange-600">Rp 1.500.499</p>
+            
             </div>
           <!-- Card Product Popular End -->
           </div>
@@ -226,22 +248,22 @@
       <!-- SuperQuality Section Start -->
       <section class="padding">
         <section id="tentang-kami" class="flex max-container justify-between items-center max-lg:flex-col w-full gap-10">
-          <div class="flex flex-1 flex-col ">
+          <div class="flex flex-1 flex-col max-sm:pl-5">
             <h1
-          class="text-4xl leading-[55px] font-bold lg:max-w-lg capitalize mb-2"
+          class="text-4xl max-sm:text-[45px] leading-[55px] font-bold lg:max-w-lg capitalize mb-6"
         >
-         We Provide You <span class="text-orange-500">Super</span> <br> <span class="text-orange-500">Quality</span> Shoes
+         Kami Menyediakan <br>Anda Sepatu Yang</span> <br> <span class="text-orange-500">Berkualitas</span><span class="text-orange-500"> Terbaik</span> 
         </h1>
         <p class="mb-4 text-slate-400 text-lg lg:max-w-[500px] leading-6">
           Temukan koleksi terbaru Nike yang penuh gaya,<br />
           kenyamanan berkualitas, dan inovasi untuk kehidupan aktif Anda.
         </p>
         <p class="text-slate-400 text-lg lg:max-w-[500px] leading-6 mb-6">Dedikasi kami terhadap detail dan keunggulan memastikan kepuasan Anda</p>
-      
         <div>
         <button
-          class="px-7 py-3 rounded-full flex items-center justify-center gap-2 leading-none bg-orange-600 text-white border-orange-500 "
-        >View Details</button>
+          class="px-5 py-3 rounded-full flex items-center justify-center gap-2 leading-none bg-orange-600 text-white border-orange-500 "
+        >Shop now
+      <img src="image/arrow-right.svg" alt=""></button>
           </div>
           </div>
           <div class="flex-1 flex justify-center items-center transition hover:scale-105 duration-400">
@@ -253,13 +275,13 @@
 
        <!-- Service Section Start --> 
        <section class="padding-x py-16">
-        <section class="max-container flex flex-warp justify-center gap-10">
-          <div class="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-lg shadow-lg px-10 py-10 transition hover:scale-105 duration-400 hover:bg-slate-50">
+        <section class="max-container flex flex-warp justify-center gap-10 max-sm:flex-col max-sm:gap-5 max-lg:flex-wrap">
+          <div class="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-lg shadow-lg px-10 py-10 transition hover:scale-105 duration-400 hover:bg-slate-50 max-lg:flex-wrap">
             <div class="w-11 h-11 bg-orange-500 flex justify-center items-center rounded-full">
               <img src="image/truck-fast.svg" alt="" width="25" height="25">
             </div>
             <h3 class="font-bold text-2xl leading-normal mt-5 ">Gratis Ongkos Kirim</h3>
-            <p class="text-base mt-2 text-slate-400 leading-normal break-words">Nikmati belanja tanpa hambatan dengan layanan gratis ongkos kirim kami.</p>
+            <p class="text-base mt-2 text-slate-400 leading-normal break-words max-sm:text-lg">Nikmati belanja tanpa hambatan dengan layanan gratis ongkos kirim kami.</p>
           </div>
 
           <div class="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-lg shadow-lg px-10 py-10 transition hover:scale-105 duration-400 hover:bg-slate-50">
@@ -267,7 +289,7 @@
               <img src="image/shield-tick.svg" alt="" width="25" height="25">
             </div>
             <h3 class="font-bold text-2xl leading-normal mt-5 ">Pembayaran Yang Aman</h3>
-            <p class="text-base mt-2 text-slate-400 leading-normal break-words">Rasakan transaksi yang bebas dari rasa khawatir dengan opsi pembayaran kami yang aman.</p>
+            <p class="text-base mt-2 text-slate-400 leading-normal break-words max-sm:text-lg">Rasakan transaksi yang bebas dari rasa khawatir dengan opsi pembayaran kami yang aman.</p>
           </div>
 
           <div class="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-lg shadow-lg px-10 py-10 transition hover:scale-105 duration-400 hover:bg-slate-50">
@@ -275,14 +297,14 @@
               <img src="image/support.svg" alt="" width="25" height="25">
             </div>
             <h3 class="font-bold text-2xl leading-normal mt-5 ">Senang membantu Anda</h3>
-            <p class="text-base mt-2 text-slate-400 leading-normal break-words">Tim kami yang berdedikasi siap membantu Anda di setiap waktu.</p>
+            <p class="text-base mt-2 text-slate-400 leading-normal break-words max-sm:text-lg">Tim kami yang berdedikasi siap membantu Anda di setiap waktu.</p>
           </div>
         </section>
        </section>
        <!-- Service Section End -->
 
        <!-- SpecialOffer Section Start -->
-       <section class="padding">
+       <section class="padding max-sm:px-7">
         <section class="flex items-center max-xl:flex-col-reverse max-container gap-10 justify-center">
           <div class="flex-1">
             <img src="image/offer.svg" alt="" width="773" height="687" class="w-full object-contain">
@@ -300,7 +322,7 @@
         </p>
         <p class="text-slate-400 text-lg leading-6 mb-6">Jelajahi dunia penuh kemungkinan yang dirancang untuk memenuhi keinginan unik Anda, melampaui ekspektasi tertinggi. Perjalanan Anda bersama kami sungguh luar biasa.</p>
       
-        <div class="flex flex-warp gap-5">
+        <div class="flex flex-warp gap-5 max-sm:gap-3">
         <button
           class="px-5 py-3 rounded-full flex items-center justify-center leading-none bg-orange-600 text-white border-orange-500 gap-3"
         >Shop Now
@@ -318,19 +340,19 @@
        <!-- CustomerReviews Section Start -->
        <section class="padding bg-pale-blue">
         <section class="max-container">
-          <h3 class="text-4xl text-center font-bold">
-            What Our
-            <span class="text-orange-500">Customers</span>
-            Say?
+          <h3 class="text-4xl text-center font-bold max-sm:text-[40px]">
+           Apa yang <br>Dikatakan Oleh
+            <span class="text-orange-500">Pelanggan</span>
+            Kami?
           </h3>
-          <p class="max-w-lg m-auto info-text text-center mt-4">
-            Hear genuine stories from our satisfied customers about their exceptional experiences with us.
+          <p class="max-w-lg m-auto info-text text-center mt-8">
+            Dengarkan kisah-kisah nyata dari para pelanggan kami yang puas tentang pengalaman luar biasa mereka bersama kami.
           </p>
           <div class="flex flex-1 justify-evenly items-center mt-24 max-lg:flex-col">
             <div class="flex justify-center items-center flex-col max-lg:mb-16">
               
               <img src="image/customer1.jpeg" alt="" class="rounded-full object-cover w-[120px] h-[120px]">
-              <p class=" mt-1 max-w-sm text-center info-text">The attention to detail and the quality of the product exceeded my expectations. Highly recommended!</p>
+              <p class=" mt-1 max-w-sm text-center info-text">Perhatian terhadap detail dan kualitas produk melebihi ekspektasi saya. Sangat direkomendasikan!</p>
               <div class=" mt-3 flex items-center gap-2.5">
                 <img src="image/star.svg" width="24" height="24" class="object-contain m-0"/>
                 <p class="font-bold">(4.7)</p>
@@ -341,7 +363,7 @@
 
               <div class="flex justify-center items-center flex-col">
               <img src="image/customer2.svg" alt="" class="rounded-full object-cover w-[120px] h-[120px]">
-              <p class="mt-1 max-w-sm text-center info-text">The product not only met but exceeded my expectations. I'll definitely be a returning customer!</p>
+              <p class="mt-1 max-w-sm text-center info-text">Produk ini tidak hanya memenuhi, tetapi juga melebihi harapan saya. Saya pasti akan menjadi pelanggan tetap!</p>
               <div class=" mt-3 flex items-center gap-2.5">
                 <img src="image/star.svg" width="24" height="24" class="object-contain m-0"/>
                 <p class="font-bold">(4.5)</p>
@@ -356,13 +378,13 @@
        
        <!-- Subscribe Section Start -->
        <section class="padding-x sm:py-32 py-16 w-full">
-        <section id="kontak-kami" class="max-container flex justify-center items-center gap-10 flex-col">
-          <h3 class="text-4xl font-bold max-sm:text-[40px]">Sign Up for <span class="text-orange-500">Updates</span> & Newsletter</h3>
+        <section id="kontak-kami" class="max-container flex justify-center items-center gap-10 max-sm:gap-5 flex-col">
+          <h3 class="text-4xl font-bold max-sm:text-[30px] leading-normal">Daftar dan dapatkan <span class="text-orange-500">Pembaruan</span> dan Surat Pemberitaan</h3>
           <div class="flex items-center w-full   sm:border border-slate-400 rounded-full p-2 lg:max-w-[70%] gap-5 max-sm:flex-col">
             <input type="text" placeholder="subscribe@nike.com"
             class="input text-center max-sm:p-3">
             <div class="flex max-sm:w-full justify-end">
-              <button class="bg-orange-500 px-6 py-2 rounded-full text-white ">Sign Up</button>
+              <button class="bg-orange-500 px-6 py-2 rounded-full text-white ">Daftar</button>
             </div>
           </div>
         </section>
@@ -370,14 +392,14 @@
        <!-- Subscribe Section End -->
 
        <!-- Footer Section Start -->
-       <section class="bg-black padding-x padding-t pb-8">
+       <section class="bg-black padding-x padding-t pb-8 max-sm:px-8">
         <footer class="max-container">
-          <div class="flex justify-between item-start gap-20 flex-wrap max-lg:flex-col">
+          <div class="flex justify-between item-start gap-20 flex-wrap max-lg:flex-col max-sm:gap-10">
             <div class="flex flex-col items-start">
               <a href="/">
                 <img src="image/footer-logo.svg" alt="">
               </a>
-              <p class="text-white text-base sm:max-w-[350px] leading-7 mt-6 font-montserrat mb-5">Get shoes ready for the new term at your nearest Nike store. Find Your perfect Size In Store. Get Rewards</p>
+              <p class="text-white text-base sm:max-w-[350px] leading-7 mt-6 font-montserrat mb-5">Siapkan sepatu untuk musim ajaran baru di toko Nike terdekat. Temukan Ukuran Sempurna Anda di Toko. Dapatkan Hadiah</p>
               <div class="flex items-center gap-5">
                 <div class="rounded-full w-11 h-11 bg-white flex items-center justify-center">
                   <img src="image/facebook.svg" alt="" width="30" height="30">
@@ -391,10 +413,10 @@
               </div>
             </div>
 
-            <div class="flex flex-1 lg:gap-32 wide:gap-60 max-sm:gap-10">
+            <div class="flex flex-1 lg:gap-32 wide:gap-60 max-sm:gap-5">
                 <div class="flex flex-col items-center">
                   <h4 class="text-white text-2xl font-semibold">Products</h4>
-                  <ul class="flex flex-col items-center mt-2">
+                  <ul class="flex flex-col items-start mt-2">
                     <li class="text-white leading-normal mt-3 text-base hover:text-slate-500">
                       <a href="">Air Force 1</a>
                     </li>
@@ -414,7 +436,7 @@
                 </div>
                 <div class="flex flex-col items-center">
                   <h4 class="text-white text-2xl font-semibold">Help</h4>
-                  <ul class="flex flex-col  items-center mt-2">
+                  <ul class="flex flex-col  items-start mt-2">
                     <li class="text-white leading-normal mt-3 text-base hover:text-slate-500">
                       <a href="">About us</a>
                     </li>
@@ -434,7 +456,7 @@
                 </div>
                 <div class="flex flex-col items-center" >
                   <h4 class="text-white text-2xl font-semibold">Get in touch</h4>
-                  <ul class="flex flex-col  items-center mt-2">
+                  <ul class="flex flex-col  items-start mt-2">
                     <li class="text-white leading-normal mt-3 text-base hover:text-slate-500">
                       <a href="">customer@nike.com</a>
                     </li>
@@ -457,6 +479,7 @@
        </section>
        <!-- Footer Section End -->
     </main>
+    <script src="hambuger-menu.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
